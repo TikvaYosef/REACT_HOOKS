@@ -8,6 +8,7 @@ function Form() {
     let [gender, setgender] = useState(0);
     let [Guided, setGuided] = useState(0);
 
+ 
 
     let inpF = (event) => { firstName = event.target.value };
     let inpL = (event) => { lastName = event.target.value };
@@ -15,10 +16,18 @@ function Form() {
     let inpg = (event) => { gender = event.target.value };
     let inpGu = (event) => { Guided = event.target.value };
 
-
-    function showDitels(func,parameter){
-        func(parameter)
+    function btnButton() {
+        setfirstName(firstName),
+        setlastName(lastName),
+        setyear(yearOfBirth),
+        setgender(gender),
+        setGuided(Guided)       
     }
+
+
+    // function showDitels(func, parameter) {
+    //     func(parameter)
+    // }
 
     // let array = [{ firstName: inpF() }, { lastName: inpL() }, { yearOfBirth: inpY() }, { gender: inpg() }, { Guided: inpGu() }];
 
@@ -29,7 +38,7 @@ function Form() {
     // }
 
 
-   
+
 
 
     return (
@@ -45,18 +54,14 @@ function Form() {
             <label>Guided</label><br />
             <input onChange={inpGu}></input><br />
 
-            <button onClick={() => {showDitels(setfirstName,firstName)}}>click</button>
+            <button onClick={() => { btnButton() }}>click</button>
 
             <h1>employees list</h1>
             <p>{firstName} {lastName} {yearOfBirth} {gender} {Guided}</p>
 
-            {/* <ul>
-                <li>{firstName}</li>
-                <li>{lastName}</li>
-                <li>{yearOfBirth}</li>
-                <li>{gender}</li>
-                <li>{Guided}</li>
-            </ul> */}
+            <ul>
+                <li> <p>{firstName} {lastName} {yearOfBirth} {gender} {Guided}</p></li>
+            </ul>
 
 
         </div>
