@@ -24,7 +24,6 @@ function Form() {
         setGuided(Guided)       
     }
 
-
     // function showDitels(func, parameter) {
     //     func(parameter)
     // }
@@ -36,10 +35,6 @@ function Form() {
     //        let user =  array[i];
     //     }
     // }
-
-
-
-
 
     return (
         <div>
